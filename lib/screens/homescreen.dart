@@ -7,29 +7,57 @@ class Homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: Color.fromARGB(248, 121, 184, 112),
+      appBar: AppBar(backgroundColor: Color.fromARGB(248, 90, 151, 82)),
       drawer: Drawer(
-        backgroundColor: Color.fromARGB(249, 34, 142, 20),
+        backgroundColor: Color.fromARGB(248, 70, 150, 59),
         child: ListView(
-          padding: EdgeInsets.zero,
           children: const <Widget>[
             ListTile(
               leading: Icon(Icons.food_bank_outlined),
-              title: Text('Rezepte'),
+              title: Text(style: TextStyle(color: Colors.white), 'Rezepte'),
             ),
             ListTile(
               leading: Icon(Icons.catching_pokemon_outlined),
-              title: Text('Aktivitäten'),
+              title: Text(style: TextStyle(color: Colors.white), 'Aktivitäten'),
             ),
             ListTile(
               leading: Icon(Icons.camera_alt_outlined),
-              title: Text('Filme'),
+              title: Text(style: TextStyle(color: Colors.white), 'Filme'),
             ),
           ],
         ),
       ),
 
-      body: const Center(child: Zufallsrad()),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: DropdownButton<String>(
+                hint: const Text("Kategorie auswählen"),
+                underline: const SizedBox(),
+                onChanged: (String? value) {},
+                items: const [
+                  DropdownMenuItem(value: 'Rezepte', child: Text('Rezepte')),
+                  DropdownMenuItem(
+                    value: 'Aktivitäten',
+                    child: Text('Aktivitäten'),
+                  ),
+                  DropdownMenuItem(value: 'Filme', child: Text('Filme')),
+                ],
+              ),
+            ),
+            SizedBox(height: 30),
+            SizedBox(width: 400, height: 400, child: Zufallsrad()),
+          ],
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(Icons.add),

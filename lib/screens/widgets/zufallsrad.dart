@@ -9,7 +9,7 @@ class Zufallsrad extends StatelessWidget {
     return FortuneWheel(
       indicators: [
         FortuneIndicator(
-          alignment: Alignment.center,
+          alignment: Alignment.topCenter,
           child: TriangleIndicator(color: Colors.green),
         ),
       ],
