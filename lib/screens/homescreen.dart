@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:rand_o_mate/screens/widgets/zufallsrad.dart';
 
-class Homescreen extends StatelessWidget {
+class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
   @override
+  State<Homescreen> createState() => _HomescreenState();
+}
+
+class _HomescreenState extends State<Homescreen> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(248, 121, 184, 112),
-      appBar: AppBar(backgroundColor: Color.fromARGB(248, 90, 151, 82)),
+      backgroundColor: Color.fromARGB(248, 8, 8, 8),
+      appBar: AppBar(backgroundColor: Color.fromARGB(248, 0, 0, 0)),
       drawer: Drawer(
-        backgroundColor: Color.fromARGB(248, 70, 150, 59),
+        backgroundColor: Color.fromARGB(248, 58, 58, 58),
         child: ListView(
           children: const <Widget>[
             ListTile(
