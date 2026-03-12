@@ -4,7 +4,7 @@ class Rezepte {
   final String category;
   final String ingredients;
   final String instructions;
-  final String image;
+  final String? image;
 
   Rezepte({
     required this.id,
@@ -12,7 +12,7 @@ class Rezepte {
     required this.category,
     required this.ingredients,
     required this.instructions,
-    required this.image,
+    this.image,
   });
   Rezepte.fromJson(Map<String, dynamic> json)
     : id = json['id'],

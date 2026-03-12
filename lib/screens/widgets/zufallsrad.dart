@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
+import 'package:rand_o_mate/model/zufallgenerator.dart';
 
 class Zufallsrad extends StatelessWidget {
-  const Zufallsrad({super.key});
+  final List<Zufallgenerator> items;
+  final Stream<int> selected;
+  const Zufallsrad({super.key, required this.items, required this.selected});
 
   @override
   Widget build(BuildContext context) {
     return FortuneWheel(
+      selected: selected,
       indicators: [
         FortuneIndicator(
           alignment: Alignment.topCenter,
@@ -15,13 +19,16 @@ class Zufallsrad extends StatelessWidget {
       ],
       animateFirst: false,
       // physics: NoPanPhysics(),
-      items: [
-        FortuneItem(child: Text('Option 1')),
-        FortuneItem(child: Text('Option 2')),
-        FortuneItem(child: Text('Option 3')),
-        FortuneItem(child: Text('Option 4')),
-        FortuneItem(child: Text('Option 5')),
-      ],
+      items: items
+          .map(
+            (item) => FortuneItem(
+              child: Text(
+                item.title,
+                style: TextStyle(fontSize: 18, color: Colors.white),
+              ),
+            ),
+          )
+          .toList(),
     );
   }
 }
