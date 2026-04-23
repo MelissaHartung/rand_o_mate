@@ -3,9 +3,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:rand_o_mate/model/zufallgenerator.dart';
-import 'package:rand_o_mate/screens/addpages/addAktivitaetenscreen.dart';
-import 'package:rand_o_mate/screens/addpages/addRezepte.dart';
-import 'package:rand_o_mate/screens/addpages/add_enrty_dialog.dart';
+import 'package:rand_o_mate/screens/%C3%BCbersichtenscreens/uebersichtspage.dart';
+import 'package:rand_o_mate/screens/Add_dialog/add_enrty_dialog.dart';
 import 'package:rand_o_mate/screens/widgets/zufallsrad.dart';
 import 'package:rand_o_mate/services/zufallgenerator_services.dart';
 
@@ -120,16 +119,22 @@ class _HomescreenState extends State<Homescreen> {
         onPressed: () {
           showDialog(context: context, builder: (context) => const AddEntryDialog());
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           if (index == 0) {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const AddFormularRezepte()));
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => const Uebersichtspage(category: 'Rezepte')));
           } else if (index == 1) {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const AddFormularAktivitaeten()));
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => const Uebersichtspage(category: 'Aktivitäten')));
           } else if (index == 2) {
-            // Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddFilme()));
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => const Uebersichtspage(category: 'Filme')));
           }
         },
         backgroundColor: Color.fromARGB(248, 222, 199, 235),

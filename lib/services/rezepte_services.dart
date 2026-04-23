@@ -4,7 +4,7 @@ class RezepteServices {
   final List<Rezepte> _rezepte = [
     Rezepte(
       id: '1',
-      title: 'Pizza',
+      title: 'Fisch',
       category: 'Italia',
       ingredients: 'Teig, Tomatensauce, Käse, Belag nach Wahl',
 

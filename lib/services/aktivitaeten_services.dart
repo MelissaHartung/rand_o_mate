@@ -13,7 +13,7 @@ class AktivitaetenServices {
       id: '2',
       title: 'Fahrradtour',
       description: 'Eine Fahrradtour durch die Stadt oder auf dem Land.',
-      ort: 'Stadt, Land, Radweg',
+      ort: 'Draußen',
       kategorie: 'Aktivitäten',
     ),
     Aktivitaeten(
@@ -34,7 +34,7 @@ class AktivitaetenServices {
       id: '5',
       title: 'Yoga machen',
       description: 'Eine Yoga-Session zu Hause oder im Studio machen.',
-      ort: 'Home, Studio',
+      ort: 'Home',
       kategorie: 'Aktivitäten',
     ),
   ];

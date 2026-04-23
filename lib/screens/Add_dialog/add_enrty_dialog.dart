@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rand_o_mate/screens/addpages/addAktivitaetenscreen.dart';
-import 'package:rand_o_mate/screens/addpages/addRezepte.dart';
+import 'package:rand_o_mate/screens/Add_dialog/aktivitaeten_add_formular.dart';
+import 'package:rand_o_mate/screens/Add_dialog/rezepte_add_formular.dart';
 
 class AddEntryDialog extends StatefulWidget {
   const AddEntryDialog({super.key});

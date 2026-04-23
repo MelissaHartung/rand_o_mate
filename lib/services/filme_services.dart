@@ -2,19 +2,9 @@ import 'package:rand_o_mate/model/filme.dart';
 
 class FilmeServices {
   final List<Filme> _filme = [
-    Filme(
-      id: '1',
-      title: 'Inception',
-      time: 123,
-      genre: 'Science-Fiction, Action',
-    ),
-    Filme(
-      id: '2',
-      title: 'The Shawshank Redemption',
-      time: 142,
-      genre: 'Drama',
-    ),
-    Filme(id: '3', time: 175, title: 'The Godfather', genre: 'Krimi, Drama'),
+    Filme(id: '1', title: 'Inception', time: '123', genre: 'Science-Fiction, Action'),
+    Filme(id: '2', title: 'The Shawshank Redemption', time: '142', genre: 'Drama'),
+    Filme(id: '3', time: '175', title: 'The Godfather', genre: 'Krimi, Drama'),
   ];
 
   void addFilme(Filme film) {

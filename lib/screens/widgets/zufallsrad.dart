@@ -43,7 +43,13 @@ class Zufallsrad extends StatelessWidget {
             borderColor: Color.fromARGB(248, 220, 186, 240),
             borderWidth: 4,
           ),
-          child: Text(item.title, style: const TextStyle(fontSize: 18, color: Colors.white)),
+          child: Text(
+            item.title,
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(fontSize: 18, color: Colors.white),
+          ),
         );
       }).toList(),
     );
