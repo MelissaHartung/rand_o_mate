@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:rand_o_mate/model/filme.dart';
+import 'package:rand_o_mate/model/aktivitaeten.dart';
 
-class FilmeCard extends StatelessWidget {
-  final Filme film;
+class AktivitaetenCard extends StatelessWidget {
+  final Aktivitaeten aktivitaet;
 
-  const FilmeCard({super.key, required this.film});
+  const AktivitaetenCard({super.key, required this.aktivitaet});
 
   @override
   Widget build(BuildContext context) {
@@ -33,12 +33,12 @@ class FilmeCard extends StatelessWidget {
                     end: Alignment.bottomRight,
                   ),
                 ),
-                child: const Icon(Icons.camera_alt_outlined, size: 42, color: Color(0xFF39B86D)),
+                child: const Icon(Icons.catching_pokemon, size: 42, color: Color(0xFF39B86D)),
               ),
             ),
             const SizedBox(height: 16),
             Text(
-              film.title,
+              aktivitaet.title,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: Color(0xFF181818)),
@@ -47,16 +47,7 @@ class FilmeCard extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    film.genre,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Color(0xFF181818)),
-                  ),
-                ),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: Text(
-                    film.time,
+                    aktivitaet.ort,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Color(0xFF181818)),
